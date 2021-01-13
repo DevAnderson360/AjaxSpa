@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>AjaxSPA</title>
+    
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="frm/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- css -->
+    <!--link rel="stylesheet" href="MyCss/style.css" /-->
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" nav-to="/">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" nav-to="/" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" nav-to="/contato" href="#">contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" nav-to="/sobre" href="#">sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" nav-to="/price" href="#">Precos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--TAG  onde o conteúdo será carregado-->
+    <div id="root" class="mt-5 d-flex justify-content-center align-center"></div>
+
+    <!-- JavaScript (Opcional) -->
+    <script type="text/javascript" src="frm/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="frm/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--My JS Scripts-->
+    <script type="text/javascript" src="AjaxSpa.js"></script>
+
+    <script type="text/javascript">
+
+    	// contém as rotas para a pasta pages
+
+    	/*path é o caminho, page a pagina*/
+        let routes = [
+            {path : "/", page : "index.php"},//raiz primeiro que será carregado ao iniciar a página
+            {path : "/contato", page : "contato.php"},
+            {path : "/sobre", page : "sobre.php"},
+            {path : "*", page : "404.php"},//página de erro caso a o caminho não exista
+        ]
+
+        //instancia da classe 
+        //mainElement :: tag onde as paginas serão carregadas
+        //routes :: rotas
+        new AjaxSpa({mainElement : "#root", routes})
+
+        //agora é só se divertir;
+    </script>
+
+  </body>
+</html>

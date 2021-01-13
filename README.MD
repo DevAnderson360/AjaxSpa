@@ -7,11 +7,11 @@
 	- Arquivo .htaccess deve está configurado
 	- Lib Jquery.
 
-## Modo de uso
-- Na pagina index
-	- importe a lib jquery normamente
-	- importe a class AjaxSpa
-- Abra uma TAG script
-**continua..**
+## Como usar
+	- Cria uma pasta com o nome "pages" com todas as páginas do teu sistema (somente o conteúdo);
+	- Na pagina index as tags links devem ficar assim
+		**<a href="#" nav-to="/">...</a>**
+		- Onde nav-to é o pagina que deve ser carregada
+	- Vide exemplo agora
 
 
